@@ -1,0 +1,26 @@
+<project name="LeetCode" default="runnableJar" basedir=".">
+	<property name="src" value="."/>
+	<property name="build" value="build"/>
+	<target name="init">
+		<mkdir dir="${build}"/>
+	</target>
+	<target name="compile" depends="init">
+		<javac srcdir="${src}" destdir="${build}"/>
+	</target>
+	<target name="extract" depends="compile">
+		<jar destfile="${build}/seckininApp.jar" basedir="${build}"/>
+	</target>
+	
+	<property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+   
+    <target depends="compile" name="runnableJar">
+        <jar destfile="${dir.buildfile}/seckinin.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="CountOf1"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${build}"/>
+        </jar>
+    </target>
+</project>
