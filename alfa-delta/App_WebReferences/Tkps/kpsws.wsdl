@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://kps.nvi.gov.tr/WS" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://kps.nvi.gov.tr/WS" />
+      <s:element name="uf_kisiBilgisindenKimlikBilgisiSorgula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Soyad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cinsiyet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BabaAd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AnaAd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DogumTarihGun" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DogumTarihAy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DogumTarihYil" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DogumYer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uf_kisiBilgisindenKimlikBilgisiSorgulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uf_kisiBilgisindenKimlikBilgisiSorgulaResult" type="tns:ArrayOfKisiBilgisiC" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfKisiBilgisiC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="KisiBilgisiC" nillable="true" type="s1:KisiBilgisiC" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="uf_TCKimlikNodanKisiBilgisiSorgula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tcKimlik" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uf_TCKimlikNodanKisiBilgisiSorgulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uf_TCKimlikNodanKisiBilgisiSorgulaResult" type="tns:ArrayOfKisiBilgisiC" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uf_IlListesiGetir">
+        <s:complexType />
+      </s:element>
+      <s:element name="uf_IlListesiGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uf_IlListesiGetirResult" type="tns:ArrayOfIlBilgisi" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfIlBilgisi">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="IlBilgisi" nillable="true" type="s1:IlBilgisi" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="uf_IlceListesiGetir">
+        <s:complexType />
+      </s:element>
+      <s:element name="uf_IlceListesiGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uf_IlceListesiGetirResult" type="tns:ArrayOfIlceBilgisi" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfIlceBilgisi">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="IlceBilgisi" nillable="true" type="s1:IlceBilgisi" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="uf_IleBagliIlceListesiGetir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ilkod" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uf_IleBagliIlceListesiGetirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uf_IleBagliIlceListesiGetirResult" type="tns:ArrayOfIlceBilgisi" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uf_NufusCuzdaniDogrulama">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tcKimlik" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uf_NufusCuzdaniDogrulamaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uf_NufusCuzdaniDogrulamaResult" type="tns:ArrayOfNufusCuzdanC" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfNufusCuzdanC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NufusCuzdanC" nillable="true" type="s1:NufusCuzdanC" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="uf_KayitYerindenNufusKayitOrnegiSorgula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IlceKodu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CiltKodu" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AileSiraNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BireySiraNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NufusOlayBilgileri" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uf_KayitYerindenNufusKayitOrnegiSorgulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uf_KayitYerindenNufusKayitOrnegiSorgulaResult" type="tns:ArrayOfNufusKayitOrnegiC" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfNufusKayitOrnegiC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NufusKayitOrnegiC" nillable="true" type="s1:NufusKayitOrnegiC" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="uf_TCKimlikNodanYerlesimYeriAdresBilgisiSorgula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tcKimlikNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uf_TCKimlikNodanYerlesimYeriAdresBilgisiSorgulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uf_TCKimlikNodanYerlesimYeriAdresBilgisiSorgulaResult" type="tns:ArrayOfKisiAdresBilgisiC" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfKisiAdresBilgisiC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="KisiAdresBilgisiC" nillable="true" type="s1:KisiAdresBilgisiC" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="uf_AdresNodanYerlesimYerindeOturanlariSorgula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AdresNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uf_AdresNodanYerlesimYerindeOturanlariSorgulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uf_AdresNodanYerlesimYerindeOturanlariSorgulaResult" type="tns:ArrayOfYerlesimYerindeOturanlarC" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfYerlesimYerindeOturanlarC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="YerlesimYerindeOturanlarC" nillable="true" type="s1:YerlesimYerindeOturanlarC" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://kps.nvi.gov.tr/WS">
+      <s:complexType name="KisiBilgisiC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TCKimlikNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="TemelBilgisi" type="s1:KisiTemelBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="DurumBilgisi" type="s1:KisiDurumBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="KayitYeriBilgisi" type="s1:KisiKayitYeriBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="KPSSorguSonucu" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="HataKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Hata" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="SorguPozisyon" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CustomBE" abstract="true" />
+      <s:complexType name="IlBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Kod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ad" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SearchInfoBE" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="NufusCuzdanSatisYerG">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:SearchInfoBE">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CuzdanSeri" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CuzdanNo" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="KPSSorgusu" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:SearchInfoBE" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AdresNoG">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorgusu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="AdresNo" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="EvlenmeG">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorgusu">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="KayitYeri" type="s1:KisiKayitYeriKodBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="KisiKayitYeriKodBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="IlceKod" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CiltKod" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="AileSiraNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="BireySiraNo" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AileListesiTCKimlikNoG">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorgusu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TCKimlikNo" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="ListeTipi" type="s1:AileListesiTipi" />
+              <s:element minOccurs="1" maxOccurs="1" name="EskiEsListele" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="AileListesiTipi">
+        <s:restriction base="s:string">
+          <s:enumeration value="AileListesi" />
+          <s:enumeration value="TumAileListesi" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="TCKimlikNoG">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorgusu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TCKimlikNo" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="NKOKayitYeriG">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorgusu">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="KayitYeri" type="s1:KisiKayitYeriKodBilgisi" />
+              <s:element minOccurs="1" maxOccurs="1" name="NKOTipi" type="s1:NufusKayitOrnegiTipi" />
+              <s:element minOccurs="1" maxOccurs="1" name="Vukuatli" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="EskiEsListele" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="NufusKayitOrnegiTipi">
+        <s:restriction base="s:string">
+          <s:enumeration value="KisiKayitOrnegi" />
+          <s:enumeration value="AileKayitOrnegi" />
+          <s:enumeration value="NufusAileKayitOrnegi" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="KayitYerindenKimlikBilgisiG">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorgusu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="IlceKod" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="CiltKod" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="AileSiraNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="BireySiraNo" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="KimlikBilgisiG">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorgusu">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Ad" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Soyad" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Cinsiyet" type="s1:CinsiyetTipi" />
+              <s:element minOccurs="0" maxOccurs="1" name="BabaAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AnaAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DogumTarih" type="s1:TarihBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="DogumYer" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="SorguTipi" type="s1:KimlikBilgisiSorguTipi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="CinsiyetTipi">
+        <s:restriction base="s:string">
+          <s:enumeration value="Bilinmiyor" />
+          <s:enumeration value="Erkek" />
+          <s:enumeration value="Kadin" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="TarihBilgisi">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Yil" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ay" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Gun" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="KimlikBilgisiSorguTipi">
+        <s:restriction base="s:string">
+          <s:enumeration value="TamEsitlik" />
+          <s:enumeration value="KelimeIcermesi" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="NKOTCKimlikNoG">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorgusu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TCKimlikNo" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="NKOTipi" type="s1:NufusKayitOrnegiTipi" />
+              <s:element minOccurs="1" maxOccurs="1" name="Vukuatli" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="EskiEsListele" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="IlceBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Kod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ad" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IlKod" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="NKOOlayBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="KayitYeri" type="s1:KisiKayitYeriKodBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="OlayTarih" type="s1:TarihBilgisi" />
+              <s:element minOccurs="1" maxOccurs="1" name="OlayTipi" type="s1:NKOOlayTipi" />
+              <s:element minOccurs="0" maxOccurs="1" name="Dusunce" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ad" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Soyad" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="NKOOlayTipi">
+        <s:restriction base="s:string">
+          <s:enumeration value="Bilinmeyen" />
+          <s:enumeration value="DigerOlaylar" />
+          <s:enumeration value="SoybagiDuzeltme" />
+          <s:enumeration value="SoyBagininReddi" />
+          <s:enumeration value="EvlatEdinme" />
+          <s:enumeration value="EvlatliginReddi" />
+          <s:enumeration value="Bosanma" />
+          <s:enumeration value="BosanmaIptali" />
+          <s:enumeration value="KayitDuzeltme" />
+          <s:enumeration value="Evlenme" />
+          <s:enumeration value="EvlenmeninFeshiIptali" />
+          <s:enumeration value="Gaiplik" />
+          <s:enumeration value="IdareceKayitDuzeltme" />
+          <s:enumeration value="KayitSilme" />
+          <s:enumeration value="KayitTasima" />
+          <s:enumeration value="MukerrerKayitSilme" />
+          <s:enumeration value="Nakil" />
+          <s:enumeration value="Diger" />
+          <s:enumeration value="SosyalGuvenlik" />
+          <s:enumeration value="Tanima" />
+          <s:enumeration value="Vasiyet" />
+          <s:enumeration value="Vatandaslik" />
+          <s:enumeration value="Velayet" />
+          <s:enumeration value="Dogum" />
+          <s:enumeration value="YesilKart" />
+          <s:enumeration value="Olum" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="KisiOlayTarihBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TescilTarih" type="s1:TarihBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="EvlenmeTarih" type="s1:TarihBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="BosanmaTarih" type="s1:TarihBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="NKOKisiBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TCKimlikNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="TemelBilgisi" type="s1:KisiTemelBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="DurumBilgisi" type="s1:KisiDurumBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="KayitYeriBilgisi" type="s1:KisiKayitYeriBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="OlayTarihBilgisi" type="s1:KisiOlayTarihBilgisi" />
+              <s:element minOccurs="1" maxOccurs="1" name="Yakinlik" type="s1:YakinlikTipi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="KisiTemelBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Ad" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Soyad" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Cinsiyet" type="s1:CinsiyetTipi" />
+              <s:element minOccurs="0" maxOccurs="1" name="BabaAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="BabaSoyad" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AnaAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AnaSoyad" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DogumTarih" type="s1:TarihBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="DogumYer" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="KizlikSoyad" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="OzurOran" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="KisiDurumBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Durum" type="s1:KisiDurumTipi" />
+              <s:element minOccurs="1" maxOccurs="1" name="MedeniHal" type="s1:MedeniHalTipi" />
+              <s:element minOccurs="1" maxOccurs="1" name="Din" type="s1:DinTipi" />
+              <s:element minOccurs="0" maxOccurs="1" name="OlumTarih" type="s1:TarihBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="OlumYer" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="KisiDurumTipi">
+        <s:restriction base="s:string">
+          <s:enumeration value="Bilinmeyen" />
+          <s:enumeration value="Acik" />
+          <s:enumeration value="Kapali" />
+          <s:enumeration value="KapaliOlum" />
+          <s:enumeration value="KapaliGaiplik" />
+          <s:enumeration value="KapaliVatandasliktanCikma" />
+          <s:enumeration value="KapaliKayitSilme" />
+          <s:enumeration value="KapaliMukerrerKayitSilme" />
+          <s:enumeration value="KapaliDiger" />
+          <s:enumeration value="KapaliCiltBolmeBirlestirme" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="MedeniHalTipi">
+        <s:restriction base="s:string">
+          <s:enumeration value="Bilinmeyen" />
+          <s:enumeration value="Bekar" />
+          <s:enumeration value="Evli" />
+          <s:enumeration value="Bosanmis" />
+          <s:enumeration value="Dul" />
+          <s:enumeration value="EvliliginFeshi" />
+          <s:enumeration value="EvliliginIptali" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="DinTipi">
+        <s:restriction base="s:string">
+          <s:enumeration value="Bilinmeyen" />
+          <s:enumeration value="Islam" />
+          <s:enumeration value="Hiristiyan" />
+          <s:enumeration value="Musevi" />
+          <s:enumeration value="Suryani" />
+          <s:enumeration value="SuryaniKadim" />
+          <s:enumeration value="Budist" />
+          <s:enumeration value="Dinsiz" />
+          <s:enumeration value="DigerDin" />
+          <s:enumeration value="BilinmeyenDin" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="KisiKayitYeriBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="IlKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IlAd" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IlceKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IlceAd" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CiltKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="CiltAd" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="AileSiraNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="BireySiraNo" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="YakinlikTipi">
+        <s:restriction base="s:string">
+          <s:enumeration value="Kendisi" />
+          <s:enumeration value="Esi" />
+          <s:enumeration value="Oglu" />
+          <s:enumeration value="Kizi" />
+          <s:enumeration value="EskiEsi" />
+          <s:enumeration value="Babasi" />
+          <s:enumeration value="Annesi" />
+          <s:enumeration value="Kardesi" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="EvlenmeBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="EsTCKimlikNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="EsTemelBilgisi" type="s1:KisiTemelBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="EsKayitYeriBilgisi" type="s1:KisiKayitYeriBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="EvlenmeTarihi" type="s1:TarihBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="EvlenmeYeri" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AileBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TCKimlikNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="TemelBilgisi" type="s1:KisiTemelBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="DurumBilgisi" type="s1:KisiDurumBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="KayitYeriBilgisi" type="s1:KisiKayitYeriBilgisi" />
+              <s:element minOccurs="1" maxOccurs="1" name="Yakinlik" type="s1:YakinlikTipi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="YurtDisiAdresBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Ulke" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Sehir" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="KoyAdresBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="IlKodu" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Il" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IlceKodu" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ilce" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="BucakKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Bucak" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="KoyKayitNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="KoyKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Koy" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MahalleKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Mahalle" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CsbmKodu" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Csbm" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisKapiNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IcKapiNo" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BeldeAdresBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="IlKodu" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Il" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IlceKodu" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ilce" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="BucakKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Bucak" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="KoyKayitNo" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="KoyKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Koy" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MahalleKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Mahalle" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CsbmKodu" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Csbm" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisKapiNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IcKapiNo" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="IlIlceMerkeziAdresBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="IlKodu" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Il" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IlceKodu" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ilce" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MahalleKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Mahalle" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CsbmKodu" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Csbm" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisKapiNo" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IcKapiNo" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AdresBilgisi">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:CustomBE">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Tip" type="s1:AdresTipi" />
+              <s:element minOccurs="1" maxOccurs="1" name="AdresNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="IlIlceMerkeziAdresi" type="s1:IlIlceMerkeziAdresBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="BeldeAdresi" type="s1:BeldeAdresBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="KoyAdresi" type="s1:KoyAdresBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="YurtDisiAdresi" type="s1:YurtDisiAdresBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="AdresTipi">
+        <s:restriction base="s:string">
+          <s:enumeration value="Bilinmiyor" />
+          <s:enumeration value="IlIlceMerkeziAdresi" />
+          <s:enumeration value="BeldeAdresi" />
+          <s:enumeration value="KoyAdresi" />
+          <s:enumeration value="YurtDisiAdresi" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="OlayBilgisiC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TCKimlikNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="OlayTarih" type="s1:TarihBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CiltKoduC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="CiltKodu" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="CiltTipi" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="NufusKayitOrnegiC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="KayitYeri" type="s1:KisiKayitYeriBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="KisiListesi" type="s1:ArrayOfNKOKisiBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="OlayListesi" type="s1:ArrayOfNKOOlayBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfNKOKisiBilgisi">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NKOKisiBilgisi" nillable="true" type="s1:NKOKisiBilgisi" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfNKOOlayBilgisi">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NKOOlayBilgisi" nillable="true" type="s1:NKOOlayBilgisi" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NufusCuzdanC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TCKimlikNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="CuzdanSeri" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CuzdanNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ad" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Soyad" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="BabaAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AnaAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DogumYer" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DogumTarih" type="s1:TarihBilgisi" />
+              <s:element minOccurs="1" maxOccurs="1" name="VerildigiIlceKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="VerildigiIlceAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="VerilmeTarih" type="s1:TarihBilgisi" />
+              <s:element minOccurs="1" maxOccurs="1" name="verilmeNeden" type="s1:CuzdanVerilmeNedenTipi" />
+              <s:element minOccurs="1" maxOccurs="1" name="KayitNo" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="CuzdanVerilmeNedenTipi">
+        <s:restriction base="s:string">
+          <s:enumeration value="Dogum" />
+          <s:enumeration value="Yeniden" />
+          <s:enumeration value="Kayip" />
+          <s:enumeration value="Yenileme" />
+          <s:enumeration value="Degistirme" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="NufusCuzdanSatisYerC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SatilanYer" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CuzdanTur" type="s1:CinsiyetTipi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="KimlikBilgisiDegisenlerC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TCKimlikNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="TemelBilgisi" type="s1:KisiTemelBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DogumIstatistigiC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="IlKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IlAd" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IlceKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IlceAd" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Yil" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Ay" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Cinsiyet" type="s1:CinsiyetTipi" />
+              <s:element minOccurs="1" maxOccurs="1" name="Sayi" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="OlumIstatistigiC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="IlKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IlAd" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IlceKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IlceAd" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Yil" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Ay" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Cinsiyet" type="s1:CinsiyetTipi" />
+              <s:element minOccurs="1" maxOccurs="1" name="Sayi" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="EvlenmeIstatistigiC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="IlKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IlAd" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IlceKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IlceAd" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Yil" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Ay" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Sayi" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BosanmaIstatistigiC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="IlKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IlAd" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IlceKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IlceAd" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Yil" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Ay" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Sayi" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="EvlenmeC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TCKimlikNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="TemelBilgisi" type="s1:KisiTemelBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="KayitYeri" type="s1:KisiKayitYeriBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="EvlenmeListesi" type="s1:ArrayOfEvlenmeBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfEvlenmeBilgisi">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EvlenmeBilgisi" nillable="true" type="s1:EvlenmeBilgisi" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="KayipCuzdanC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="KayipCuzdanSeri" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="KayipCuzdanNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="KayipTarih" type="s1:TarihBilgisi" />
+              <s:element minOccurs="1" maxOccurs="1" name="TCKimlikNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ad" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Soyad" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="BabaAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AnaAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DogumYer" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DogumTarih" type="s1:TarihBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="YeniCuzdanSeri" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="YeniCuzdanNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="YeniCuzdanVerilmeTarih" type="s1:TarihBilgisi" />
+              <s:element minOccurs="1" maxOccurs="1" name="YeniCuzdanVerenIlceKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="YeniCuzdanVerenIlceAd" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="KayipTur" type="s1:CuzdanKayipTipi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="CuzdanKayipTipi">
+        <s:restriction base="s:string">
+          <s:enumeration value="DoluKayipNufusCuzdani" />
+          <s:enumeration value="BosKayipNufusCuzdani" />
+          <s:enumeration value="BosKayipAileCuzdani" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="KayipCuzdanEskiC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="KayipCuzdanSeri" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="KayipCuzdanNo" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="KayipOlduguYil" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ad" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Soyad" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="BabaAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DogumTarih" type="s1:TarihBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AileListesiC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TCKimlikNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="AileListesi" type="s1:ArrayOfAileBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfAileBilgisi">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AileBilgisi" nillable="true" type="s1:AileBilgisi" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="YabanciKisiBilgisiC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="KimlikNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="EgmSahisId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ad" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Soyad" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Cinsiyet" type="s1:CinsiyetTipi" />
+              <s:element minOccurs="0" maxOccurs="1" name="BabaAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AnneAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DogumTarih" type="s1:TarihBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="DogumYer" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MedeniHal" type="s1:MedeniHalTipi" />
+              <s:element minOccurs="1" maxOccurs="1" name="UyrukKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="UyrukAd" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IkametDuzenleyenIlKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IkametDuzenleyenIlAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IkametTezkereNo" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IkametSuresiKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IkametSuresiAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IzinBaslangicTarih" type="s1:TarihBilgisi" />
+              <s:element minOccurs="0" maxOccurs="1" name="BabaEgmSahisId" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="BabaKimlikNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="AnneEgmSahisId" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="AnneKimlikNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="EsEgmSahisId" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IkametAdresIlKod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IkametAdresIlAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IkametAdresIlceAd" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IkametAdres" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="KisiAdresBilgisiC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TCKimlikNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="YerlesimYeriAdresi" type="s1:AdresBilgisi" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TCKimlikNoC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TCKimlikNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ad" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Soyad" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DogumYil" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="YerlesimYerindeOturanlarC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="AdresNo" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="KisiListesi" type="s1:ArrayOfTCKimlikNoC" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfTCKimlikNoC">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TCKimlikNoC" nillable="true" type="s1:TCKimlikNoC" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CiltAdiC">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:KPSSorguSonucu">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CiltAdi" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CiltTipi" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="uf_kisiBilgisindenKimlikBilgisiSorgulaSoapIn">
+    <wsdl:part name="parameters" element="tns:uf_kisiBilgisindenKimlikBilgisiSorgula" />
+  </wsdl:message>
+  <wsdl:message name="uf_kisiBilgisindenKimlikBilgisiSorgulaSoapOut">
+    <wsdl:part name="parameters" element="tns:uf_kisiBilgisindenKimlikBilgisiSorgulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="uf_TCKimlikNodanKisiBilgisiSorgulaSoapIn">
+    <wsdl:part name="parameters" element="tns:uf_TCKimlikNodanKisiBilgisiSorgula" />
+  </wsdl:message>
+  <wsdl:message name="uf_TCKimlikNodanKisiBilgisiSorgulaSoapOut">
+    <wsdl:part name="parameters" element="tns:uf_TCKimlikNodanKisiBilgisiSorgulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="uf_IlListesiGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:uf_IlListesiGetir" />
+  </wsdl:message>
+  <wsdl:message name="uf_IlListesiGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:uf_IlListesiGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="uf_IlceListesiGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:uf_IlceListesiGetir" />
+  </wsdl:message>
+  <wsdl:message name="uf_IlceListesiGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:uf_IlceListesiGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="uf_IleBagliIlceListesiGetirSoapIn">
+    <wsdl:part name="parameters" element="tns:uf_IleBagliIlceListesiGetir" />
+  </wsdl:message>
+  <wsdl:message name="uf_IleBagliIlceListesiGetirSoapOut">
+    <wsdl:part name="parameters" element="tns:uf_IleBagliIlceListesiGetirResponse" />
+  </wsdl:message>
+  <wsdl:message name="uf_NufusCuzdaniDogrulamaSoapIn">
+    <wsdl:part name="parameters" element="tns:uf_NufusCuzdaniDogrulama" />
+  </wsdl:message>
+  <wsdl:message name="uf_NufusCuzdaniDogrulamaSoapOut">
+    <wsdl:part name="parameters" element="tns:uf_NufusCuzdaniDogrulamaResponse" />
+  </wsdl:message>
+  <wsdl:message name="uf_KayitYerindenNufusKayitOrnegiSorgulaSoapIn">
+    <wsdl:part name="parameters" element="tns:uf_KayitYerindenNufusKayitOrnegiSorgula" />
+  </wsdl:message>
+  <wsdl:message name="uf_KayitYerindenNufusKayitOrnegiSorgulaSoapOut">
+    <wsdl:part name="parameters" element="tns:uf_KayitYerindenNufusKayitOrnegiSorgulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="uf_TCKimlikNodanYerlesimYeriAdresBilgisiSorgulaSoapIn">
+    <wsdl:part name="parameters" element="tns:uf_TCKimlikNodanYerlesimYeriAdresBilgisiSorgula" />
+  </wsdl:message>
+  <wsdl:message name="uf_TCKimlikNodanYerlesimYeriAdresBilgisiSorgulaSoapOut">
+    <wsdl:part name="parameters" element="tns:uf_TCKimlikNodanYerlesimYeriAdresBilgisiSorgulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="uf_AdresNodanYerlesimYerindeOturanlariSorgulaSoapIn">
+    <wsdl:part name="parameters" element="tns:uf_AdresNodanYerlesimYerindeOturanlariSorgula" />
+  </wsdl:message>
+  <wsdl:message name="uf_AdresNodanYerlesimYerindeOturanlariSorgulaSoapOut">
+    <wsdl:part name="parameters" element="tns:uf_AdresNodanYerlesimYerindeOturanlariSorgulaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="KPSSoap">
+    <wsdl:operation name="uf_kisiBilgisindenKimlikBilgisiSorgula">
+      <wsdl:input message="tns:uf_kisiBilgisindenKimlikBilgisiSorgulaSoapIn" />
+      <wsdl:output message="tns:uf_kisiBilgisindenKimlikBilgisiSorgulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uf_TCKimlikNodanKisiBilgisiSorgula">
+      <wsdl:input message="tns:uf_TCKimlikNodanKisiBilgisiSorgulaSoapIn" />
+      <wsdl:output message="tns:uf_TCKimlikNodanKisiBilgisiSorgulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uf_IlListesiGetir">
+      <wsdl:input message="tns:uf_IlListesiGetirSoapIn" />
+      <wsdl:output message="tns:uf_IlListesiGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uf_IlceListesiGetir">
+      <wsdl:input message="tns:uf_IlceListesiGetirSoapIn" />
+      <wsdl:output message="tns:uf_IlceListesiGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uf_IleBagliIlceListesiGetir">
+      <wsdl:input message="tns:uf_IleBagliIlceListesiGetirSoapIn" />
+      <wsdl:output message="tns:uf_IleBagliIlceListesiGetirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uf_NufusCuzdaniDogrulama">
+      <wsdl:input message="tns:uf_NufusCuzdaniDogrulamaSoapIn" />
+      <wsdl:output message="tns:uf_NufusCuzdaniDogrulamaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uf_KayitYerindenNufusKayitOrnegiSorgula">
+      <wsdl:input message="tns:uf_KayitYerindenNufusKayitOrnegiSorgulaSoapIn" />
+      <wsdl:output message="tns:uf_KayitYerindenNufusKayitOrnegiSorgulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uf_TCKimlikNodanYerlesimYeriAdresBilgisiSorgula">
+      <wsdl:input message="tns:uf_TCKimlikNodanYerlesimYeriAdresBilgisiSorgulaSoapIn" />
+      <wsdl:output message="tns:uf_TCKimlikNodanYerlesimYeriAdresBilgisiSorgulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uf_AdresNodanYerlesimYerindeOturanlariSorgula">
+      <wsdl:input message="tns:uf_AdresNodanYerlesimYerindeOturanlariSorgulaSoapIn" />
+      <wsdl:output message="tns:uf_AdresNodanYerlesimYerindeOturanlariSorgulaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="KPSSoap" type="tns:KPSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="uf_kisiBilgisindenKimlikBilgisiSorgula">
+      <soap:operation soapAction="http://tempuri.org/uf_kisiBilgisindenKimlikBilgisiSorgula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_TCKimlikNodanKisiBilgisiSorgula">
+      <soap:operation soapAction="http://tempuri.org/uf_TCKimlikNodanKisiBilgisiSorgula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_IlListesiGetir">
+      <soap:operation soapAction="http://tempuri.org/uf_IlListesiGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_IlceListesiGetir">
+      <soap:operation soapAction="http://tempuri.org/uf_IlceListesiGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_IleBagliIlceListesiGetir">
+      <soap:operation soapAction="http://tempuri.org/uf_IleBagliIlceListesiGetir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_NufusCuzdaniDogrulama">
+      <soap:operation soapAction="http://tempuri.org/uf_NufusCuzdaniDogrulama" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_KayitYerindenNufusKayitOrnegiSorgula">
+      <soap:operation soapAction="http://tempuri.org/uf_KayitYerindenNufusKayitOrnegiSorgula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_TCKimlikNodanYerlesimYeriAdresBilgisiSorgula">
+      <soap:operation soapAction="http://tempuri.org/uf_TCKimlikNodanYerlesimYeriAdresBilgisiSorgula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_AdresNodanYerlesimYerindeOturanlariSorgula">
+      <soap:operation soapAction="http://tempuri.org/uf_AdresNodanYerlesimYerindeOturanlariSorgula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="KPSSoap12" type="tns:KPSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="uf_kisiBilgisindenKimlikBilgisiSorgula">
+      <soap12:operation soapAction="http://tempuri.org/uf_kisiBilgisindenKimlikBilgisiSorgula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_TCKimlikNodanKisiBilgisiSorgula">
+      <soap12:operation soapAction="http://tempuri.org/uf_TCKimlikNodanKisiBilgisiSorgula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_IlListesiGetir">
+      <soap12:operation soapAction="http://tempuri.org/uf_IlListesiGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_IlceListesiGetir">
+      <soap12:operation soapAction="http://tempuri.org/uf_IlceListesiGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_IleBagliIlceListesiGetir">
+      <soap12:operation soapAction="http://tempuri.org/uf_IleBagliIlceListesiGetir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_NufusCuzdaniDogrulama">
+      <soap12:operation soapAction="http://tempuri.org/uf_NufusCuzdaniDogrulama" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_KayitYerindenNufusKayitOrnegiSorgula">
+      <soap12:operation soapAction="http://tempuri.org/uf_KayitYerindenNufusKayitOrnegiSorgula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_TCKimlikNodanYerlesimYeriAdresBilgisiSorgula">
+      <soap12:operation soapAction="http://tempuri.org/uf_TCKimlikNodanYerlesimYeriAdresBilgisiSorgula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uf_AdresNodanYerlesimYerindeOturanlariSorgula">
+      <soap12:operation soapAction="http://tempuri.org/uf_AdresNodanYerlesimYerindeOturanlariSorgula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="KPS">
+    <wsdl:port name="KPSSoap" binding="tns:KPSSoap">
+      <soap:address location="http://172.22.1.21/ukps/kpsws.asmx" />
+    </wsdl:port>
+    <wsdl:port name="KPSSoap12" binding="tns:KPSSoap12">
+      <soap12:address location="http://172.22.1.21/ukps/kpsws.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,31 @@
+/*
+
+	Fluid Thumbnail Bar
+	
+	Author	: Sam Dunn
+	Source	: Build Internet (www.buildinternet.com)
+	Company : One Mighty Roar (www.onemightyroar.com)
+	License : MIT License / GPL License
+	
+*/
+
+	*{ border:none;}
+	body{ background:#111; }
+	
+	/* Thumbnail Tray
+	----------------------------*/			
+	#thumb-tray{ width:30%; height:245px; position:relative; z-index:1000; bottom:0%; left:0; overflow:hidden; text-align:center; background:#fff; }
+		
+		ul#thumb-list{ display:inline-block; position:relative; left:0; padding:0; list-style:none; }
+			ul#thumb-list li{ display:inline; width:106px; height:88px; float:left; overflow:hidden; margin:0; list-style:none;  background:#111; }
+				ul#thumb-list li:hover{ cursor:pointer; }
+	
+		#thumb-prev, #thumb-next{ width:40px; height:108px; position:absolute; z-index:5; bottom:0; }
+			#thumb-prev{ left:0; background: url('../imgages/thumb-back.png') no-repeat center center; }
+			#thumb-next{ right:0; background:url('../imgages/thumb-forward.png') no-repeat center center; }
+				#thumb-prev:hover, #thumb-next:hover{ cursor:pointer; background-color:rgba(256,256,256, 0.1); }
+					#thumb-prev:hover{ border-right:1px solid rgba(256,256,256, 0.2); }
+					#thumb-next:hover{ border-left:1px solid rgba(256,256,256, 0.2); }
+		
+		
+				

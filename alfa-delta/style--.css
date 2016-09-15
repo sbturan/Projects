@@ -1,0 +1,165 @@
+
+.button {
+    Font-family : Tahoma;
+    Font-size : 8pt;
+    Color :  #000000;
+    Background-color : #EBEBEB;
+    Border-width : 1px;
+    padding-left:2px;
+    Border-color : rgb(0, 0, 51);
+}
+
+body {
+	background-color: #ffffff;
+}
+
+.style3 {color: #e5f4f7; font-family: "Myriad Pro"; font-size: 12px;}
+
+#ctl00_ContentPlaceHolder1_Resimler1_IMGDIV 
+{  
+	z-index: -1;
+}
+
+
+a {
+       
+       color: #575757;
+}
+
+a:link, a:visited, a:active
+{
+    font-size: 8pt;
+    line-height: 18px;
+    color: #003399;
+    font-family: Tahoma;
+    text-decoration: none
+}
+a:hover 
+{
+	text-decoration:underline;
+    color : #D42A33;
+}
+
+a.sol 
+{  
+	font-size: 8pt;
+	color:#575757;
+}
+
+a.sol:link, a.sol:visited, a.sol:active
+{
+    font-size: 8pt;
+    line-height: 18px;
+    color: #003399;
+    font-family: Tahoma;
+    text-decoration: none
+}
+a.sol:hover 
+{
+	text-decoration:underline;
+    color : #D42A33;
+}
+
+
+
+.TABLEANA
+{
+	Font-family : Tahoma;
+    Font-style : normal;
+    Font-variant : normal;
+    Font-weight : normal;
+    Color :#FFFFFF;
+    Word-spacing : normal;
+    Letter-spacing : normal;
+}	
+
+TD
+{
+    font-size: 8pt;
+    
+}
+H1 {
+    Font-style : italic;
+    Font-variant : normal;
+}
+H3 {
+    Font-style : italic;
+    Font-variant : normal;
+}
+H2 {
+    Font-variant : normal;
+}
+
+
+BODY {
+    Font-family : Tahoma;
+    Font-style : normal;
+    Font-size: 8pt;
+    Font-variant : normal;
+    Font-weight : normal;
+    Color :#575757;
+    Word-spacing : normal;
+    Letter-spacing : normal;
+    margin-left: 0px;
+	margin-right:0px;
+	padding-left:0px;
+	padding-right:0px;
+}
+HR {
+    Color : #575757;
+    Height : 1;
+}
+
+.HeaderStyle
+{
+    background-color: #8A738C;
+    color: White;
+    font-weight: bold;
+}
+
+.AlternatingRowStyle
+{
+    background-color: #E0E0E0;
+    border-width : 1px;
+}
+
+.SelectedRowStyle
+{
+  background-color: #FFFF80;  
+}
+
+.ortala {
+	text-align: center;
+}
+
+
+.section{
+	border-top: 4px solid #3d3d33;
+	padding: 1.4em 0 3.2em 0;
+	overflow: auto;
+	width: 100%;
+	}
+.first{ border-top: none; padding-top: 0; }
+
+.modalBackground
+
+{
+
+background-color: Gray; 
+
+
+
+
+background-color: #ffffdd; 
+border-width: 3px;
+
+border-style: solid; 
+border-color: Gray;
+
+padding: 0px; 
+ 
+
+}
+
+
+

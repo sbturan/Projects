@@ -1,0 +1,216 @@
+
+.timeline {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    color: #FFF;
+    font-family: "Lucida Grande", Lucida Sans Unicode, Tahoma, Arial;
+    font-size: 8pt;
+}
+
+.timeline_arrows {
+    overflow: hidden;
+    padding-left: 2px; 
+    padding-bottom: 10px;
+    zoom: 1;
+}
+
+.timeline_arrows div {
+    float: left;
+}
+
+.timeline_date {
+    height: 26px;
+    color: #838080;
+	font-size:16px;
+    background-color: #ffffff;
+    padding: 0px 15px 0px 15px;
+    line-height: 1.6em;
+	
+}
+
+.timeline_lastyear,
+.timeline_lastmonth,
+.timeline_nextmonth,
+.timeline_nextyear {
+    cursor: pointer;
+    width: 15px;
+    height: 26px;
+	
+	
+   
+}
+
+.timeline_lastyear {
+	
+	background: url(../images/previous.png) center no-repeat;
+	background-color:#FFF;
+
+}
+
+.timeline_lastyear:hover {
+    
+   
+}
+
+.timeline_lastmonth
+{ 
+	background: url(../images/previous.png) center no-repeat;
+	background-color:#FFF;
+	}
+.timeline_nextmonth {
+
+	 background: url(../images/next.png) center no-repeat;
+	 background-color:#FFF;
+	
+}
+
+.timeline_lastmonth:hover,
+.timeline_nextmonth:hover {
+   
+}
+
+.timeline_nextyear {
+   
+   
+	 background: url(../images/next.png) center no-repeat;
+	 background-color:#FFF;
+}
+
+.timeline_nextyear:hover {
+    
+}
+
+.timeline_top {
+    overflow : hidden;
+    display: block;
+}
+
+.timeline_bottom {
+    overflow : hidden;
+    display: block;
+}
+
+.timeline_top ul, 
+.timeline_bottom ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.timeline_top li, 
+.timeline_bottom li {
+    float: left;
+
+	border: none;   
+}
+
+.timeline_bottom li {
+    border: none;
+}
+
+.timeline_bottom li {
+    padding: 0px !important;
+}
+
+.timeline_top li div, 
+.timeline_bottom li div {
+    text-transform: uppercase;
+    text-align: center;
+	
+    width: 30px;
+    height:30px;
+}
+
+
+.timeline_bottom div {
+    background: url(../images/ImgValueDay.png) no-repeat left bottom;
+   
+}
+
+.timeline_top div {
+   
+    
+} 
+
+.timeline_top .today {
+    
+   
+} 
+
+.timeline_bottom .today {
+    
+     background: url(../images/ImgSelectedDay.png) no-repeat left bottom;
+}
+
+.timeline_top .event
+{
+	color: #C1E20D;
+    cursor: hand;
+   
+	}
+.timeline_bottom .event {
+	
+	 background: url(../images/ImgEmptyValueDay.png) no-repeat left bottom;
+}
+
+.timeline_bubble {
+    display: none;   
+    overflow: hidden;
+    width: 142px; 
+    position: absolute; 
+    font-family: "Lucida Grande", Lucida Sans Unicode, Tahoma, Arial;
+    font-size: 8pt;
+   
+}
+
+.timeline_bubble .bubble_top,
+.timeline_bubble .bubble_bottom,
+.timeline_bubble .bubble_mid {
+    background: url(../images/bubble.png) repeat-y;
+    overflow: hidden;
+}
+
+.bubbleIE6 {
+    background-image: url(../images/bubble.gif) !important;
+}
+
+.timeline_bubble .bubble_top{
+    height: 10px;
+   
+}
+
+.timeline_bubble .bubble_bottom{
+    height: 10px;
+   
+}
+
+.timeline_bubble .bubble_mid {
+   /* background-position: -284px -1px;*/
+    overflow: hidden;
+}
+
+.timeline_bubble .event_title{
+    cursor: pointer;
+    color: #FFF;
+    padding: 3px 0px 3px 0px;
+    margin: 0px 5px 0px 5px;
+    border-bottom: 1px solid #999;
+    font-weight: bold;
+}
+
+.timeline_bubble .event_title:hover{
+    color: #C1E20D;
+}
+
+.timeline_bubble .event_title:hover + next{
+    display: block;
+}
+
+.timeline_bubble .event_data {
+    overflow: hidden;
+    display: none;
+    color: #fff;
+    font-weight: normal;
+    margin: 3px 0px 0px 0px;
+}

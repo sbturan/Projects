@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<iller>
+		<il>
+			<item adi="Adana" id="1"/>
+			<item adi="Adıyaman" id="2"/>
+			<item adi="Afyon" id="3"/>
+			<item adi="Ağrı" id="4"/>
+			<item adi="Amasya" id="5"/>
+			<item adi="Ankara" id="6"/>
+			<item adi="Antalya" id="7"/>
+			<item adi="Artvin" id="8"/>
+			<item adi="Aydın" id="9"/>
+			<item adi="Balıkesir" id="10"/>
+			<item adi="Bilecik" id="11"/>
+			<item adi="Bingöl" id="12"/>
+			<item adi="Bitlis" id="13"/>
+			<item adi="Bolu" id="14"/>
+			<item adi="Burdur" id="15"/>
+			<item adi="Bursa" id="16"/>
+			<item adi="Çanakkale" id="17"/>
+			<item adi="Çankırı" id="18"/>
+			<item adi="Çorum" id="19"/>
+			<item adi="Denizli" id="20"/>
+			<item adi="Diyarbakır" id="21"/>
+			<item adi="Edirne" id="22"/>
+			<item adi="Elazığ" id="23"/>
+			<item adi="Erzincan" id="24"/>
+			<item adi="Erzurum"  id="25"/>
+			<item adi="Eskişehir" id="26"/>
+			<item adi="Gaziantep" id="27"/>
+			<item adi="Giresun" id="28"/>
+			<item adi="Gümüshane" id="29"/>
+			<item adi="Hakkari" id="30" />
+			<item adi="Hatay" id="31" />
+			<item adi="Isparta" id="32" />
+			<item adi="İçel" id="33" />
+			<item adi="İstanbul" id="34"/>
+			<item adi="İzmir" id="35"/>
+			<item adi="Kars" id="36" />
+			<item adi="Kastamonu" id="37" />
+			<item adi="Kayseri" id="38" />
+			<item adi="Kırklareli" id="39"/>
+			<item adi="Kırşehir" id="40"/>
+			<item adi="Kocaeli" id="41"/>
+			<item adi="Konya" id="42" />
+			<item adi="Kütahya" id="43" />
+			<item adi="Malatya" id="44" />
+			<item adi="Manisa" id="45" />
+			<item adi="Kahramanmaraş" id="46"/>
+			<item adi="Mardin" id="47" />
+			<item adi="Muğla" id="48" />
+			<item adi="Muş" id="49" />
+			<item adi="Nevşehir" id="50" />
+			<item adi="Niğde" id="51" />
+			<item adi="Ordu" id="52" />
+			<item adi="Rize" id="53" />
+			<item adi="Sakarya" id="54"/>
+			<item adi="Samsun" id="55" />
+			<item adi="Siirt" id="56" />
+			<item adi="Sinop" id="57" />
+			<item adi="Sivas" id="58" />
+			<item adi="Tekirdağ" id="59" />
+			<item adi="Tokat" id="60" />
+			<item adi="Trabzon" id="61" />
+			<item adi="Tunceli" id="62" />
+			<item adi="Urfa" id="63" />
+			<item adi="Uşak" id="64" />
+			<item adi="Van" id="65" />
+			<item adi="Yozgat" id="66" />
+			<item adi="Zonguldak" id="67" />
+			<item adi="Aksaray" id="68" />
+			<item adi="Bayburt" id="69"/>
+			<item adi="Karaman" id="70" />
+			<item adi="Kırıkkale" id="71" />
+			<item adi="Batman" id="72" />
+			<item adi="Şırnak" id="73" />
+			<item adi="Bartın" id="74" />
+			<item adi="Ardahan" id="75" />
+			<item adi="Iğdır" id="76" />
+			<item adi="Yalova" id="77" />
+			<item adi="Karabük" id="78" />
+			<item adi="Kilis" id="79" />
+			<item adi="Osmaniye" id="80" />
+			<item adi="Düzce" id="81" />
+
+		</il>
+
+	</iller>
+
+	<bas>
+		<item adi="80" id="80" />
+		<item adi="90" id="90" />
+		<item adi="100" id="100" />
+		<item adi="110" id="110" />
+		<item adi="120" id="120" />
+		<item adi="130" id="130" />
+		<item adi="140" id="140" />
+		<item adi="145" id="145" />
+		<item adi="150" id="150" />
+		<item adi="155" id="155" />
+		<item adi="160" id="160" />
+		<item adi="165" id="165" />
+		<item adi="170" id="170" />
+		<item adi="175" id="175" />
+		<item adi="180" id="180" />
+		<item adi="185" id="185" />
+		<item adi="190" id="190" />
+		<item adi="195" id="195" />
+		<item adi="200" id="200" />
+		<item adi="205" id="205" />
+		<item adi="215" id="215" />
+		<item adi="225" id="225" />
+		<item adi="235" id="235" />
+		<item adi="245" id="245" />
+		<item adi="255" id="255" />
+		<item adi="265" id="265" />
+		<item adi="275" id="275" />
+		<item adi="285" id="285" />
+		<item adi="295" id="295" />
+		<item adi="305" id="305" />
+		<item adi="315" id="315" />
+		<item adi="385" id="385" />
+		<item adi="435" id="435" />
+		<item adi="445" id="445" />
+		<item adi="455" id="455" />
+	</bas>
+
+	<orta>
+
+		<item adi="100" id="100" />
+		<item adi="90" id="90" />
+		<item adi="80" id="80" />
+		<item adi="75" id="75" />
+		<item adi="70" id="70" />
+		<item adi="65" id="65" />
+		<item adi="60" id="60" />
+		<item adi="55" id="55" />
+		<item adi="50" id="50" />
+		<item adi="45" id="45" />
+		<item adi="40" id="40" />
+		<item adi="35" id="35" />
+		<item adi="30" id="30" />
+		<item adi="25" id="25" />
+
+	</orta>
+
+	<son>
+		<item adi="10" id="10" />
+		<item adi="12" id="12" />
+		<item adi="13" id="13" />
+		<item adi="14" id="14" />
+		<item adi="15" id="15" />
+		<item adi="16" id="16" />
+		<item adi="17" id="17" />
+		<item adi="17.5" id="17.5" />
+		<item adi="18" id="18" />
+		<item adi="19" id="19" />
+		<item adi="19.5" id="19.5" />
+		<item adi="20" id="20" />
+		<item adi="21" id="21" />
+		<item adi="22.5" id="22.5" />
+	</son>
+
+	<son>
+		<item adi="Dört Mevsim" id="1" />
+		<item adi="Kışlık" id="2" />
+		
+	</son>
+	
+	
+  
+  <dil>
+    <item adi="Dil Seçiniz" id="-1"/>
+    <item adi="Türkçe" id="tr"/>
+    <item adi="İngilizce" id="en"/>
+    
+  </dil>
+ 
+  <dosya_tipi>
+    <item adi="Foto/Resim" id="1"/>
+    <item adi="Video" id="2"/>
+    <item adi="Flash" id="3"/>
+    <item adi="Thumbnail" id="4"/>
+    <item adi="Belge" id="5"/>
+  </dosya_tipi>
+  <ik_durum>
+    <item adi="Okundu" id="1"/>
+    <item adi="Okunmadı" id="0"/>
+  </ik_durum>
+ 
+ <yayin_durumu>
+   <item adi="Yayın Durumu Seçiniz" id="-1"/>
+    <item adi="Yayında" id="True"/>
+    <item adi="Yayında Değil" id="False"/>
+	<!--<item adi="Silinmiş" id="-1"/>-->
+ </yayin_durumu>
+
+  <liste_durumu>
+    <item adi="Liste Durumu Seçiniz" id="-1"/>
+    <item adi="Liste" id="True"/>
+    <item adi="İconlu Görünüm" id="False"/>
+	<!--<item adi="Silinmiş" id="-1"/>-->
+ </liste_durumu>
+
+  <liste_gorunumu>
+    <item adi="Sütun Sayısı Seçiniz" id="1"/>
+    <item adi="2 li Görünüm" id="2"/>
+    <item adi="3 lü Görünüm" id="3"/>
+    <item adi="4 lü Görünüm" id="4"/>
+ 
+	<!--<item adi="Silinmiş" id="-1"/>-->
+ </liste_gorunumu>
+    
+ <banner_yeri>
+		<item adi="Üst" id="1"/>
+		<item adi="Alt" id="2"/>
+		<item adi="Orta Alt" id="3"/>
+		<item adi="Orta Üst" id="4"/>
+		<item adi="Sol Üst" id="5"/>
+		<item adi="Sol Orta" id="6"/>
+		<item adi="Sol Alt" id="7"/>
+		<item adi="Sağ Üst" id="8"/>
+		<item adi="Sağ Alt" id="9"/>
+		<item adi="Sağ Orta" id="10"/>
+</banner_yeri>
+<banner_tipi>
+		<item adi="Tanımlanmamış" id="0"/>
+		<item adi="İmage" id="1"/>
+		<item adi="Flash" id="2"/>
+</banner_tipi>
+  <yayin_yeri>
+    <item adi="Ana Sayfa" id="1"/>
+    <item adi="İlanlarda" id="2"/>
+    <item adi="Her Yerde" id="3"/>
+    <item adi="Bu Bölümde" id="0"/>
+  </yayin_yeri>
+</root>

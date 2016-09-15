@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{background:#534741;font-family:Arial, Helvetica, sans-serif; font-size:10px;}
+ul, li{margin:0; padding:0; list-style:none;}
+
+.menu_body {display:none; width:186px;border-right:1px solid #dbeef5;border-bottom:1px solid #dbeef5;border-left:1px solid #dbeef5;}
+.menu_body li{background:#0088b8;}
+.menu_body li.alt{background:#7bb646;}
+.menu_body li a{color:#FFFFFF; text-decoration:none; padding:10px; display:block;}
+.menu_body li a:hover{padding:12px 10px; font-weight:bold;}

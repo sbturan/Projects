@@ -1,0 +1,132 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="yonetim.master.cs" Inherits="yonetim_yonetim"  %>
+<%@ Register Src="../kutuphane/yonetimmenu.ascx" TagName="yonetimmenu" TagPrefix="uc1" %>
+<%@ Register Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head id="Head1" runat="server">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+     <title>Untitled Page</title>
+     
+    <link href="../css/Style.css" rel="stylesheet" type="text/css" />
+   <script type="text/javascript" src="../js/FusionCharts.js"></script>
+      <link href="Style.css" rel="stylesheet" type="text/css" />
+      <script type="text/javascript" src="../scripts/popsize.js"></script>
+      <script type="text/javascript" src="../scripts/goster.js"></script>
+      <script type="text/javascript" src="../scripts/global.js"></script>
+      <script language="javascript" type="text/javascript">
+          var returnLock = false;
+          var urlobj = null;
+          var currentobj = '';
+          function toggleVisible(objectID) { if (document.getElementById(objectID).style.display == 'block') { document.getElementById(objectID).style.display = 'none'; } else { document.getElementById(objectID).style.display = 'block'; } return true; }
+          function checkCopy() { return confirm('Seçtiğiniz kayıtın kopyası yaratılacak. Devam?'); }
+          function checkDelete() { return confirm('Kayıt silinecek. Devam?'); }
+          function checkStatusEnded() { return confirm('Durumu Bitmiş yaparsanız edit edilmeyecek. Devam?'); }
+          function checkMove() { return confirm('Kayıt taşınacak. Devam?'); }
+          function keyPress() { if (window.event) { if (window.event.keyCode == 13 && !returnLock) window.event.keyCode = 0; } }
+          function hideCalendar(oCalendar) { oCalendar.hide(); oCalendar.get_element().blur(); }
+
+          function openFileBrowser(obj, type, target) {
+              currentobj = target;
+              urlobj = obj;
+              if (type == '') type = 'Image';
+              var width = 580;
+              var height = 440;
+              var top = ((screen.availHeight - height) / 2) - 20;
+              var left = (screen.availWidth - width) / 2;
+              var newwin = window.open('fckeditor/editor/filemanager/browser/default/browser.html?Type=' + type + '&Connector=connectors/aspx/connector.aspx', 'FileBrowser', 'resizable=no,scrollbars=no,dependent=yes,width=' + width + ',height=' + height + ',top=' + top + ',left=' + left);
+              newwin.focus();
+              return false;
+          }
+
+          function SetUrl(url, width, height, alt) { document.getElementById(currentobj).value = url; }
+    </script>
+    
+    <style type="text/css">
+
+.modalBackground
+
+{
+
+background-color: Gray; 
+filter: alpha(opacity=70);
+
+opacity: 0.7; 
+}
+
+.modalPopup
+
+{
+
+background-color: #ffffdd; 
+border-width: 3px;
+
+border-style: solid; 
+border-color: Gray;
+
+padding: 0px; 
+ 
+
+}
+
+</style>     
+      
+</head>
+<body bgcolor="White" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- ImageReady Slices (yonetim_paneli.psd) -->
+<form id="form1" runat="server">
+    <div style="background-color:White;width:%100">
+        <asp:ScriptManager id="ScriptManager1" runat="server" AsyncPostBackErrorMessage="İşlem Zaman Aşımına Uğradı"
+         EnableScriptGlobalization="True" EnableScriptLocalization="True">
+        </asp:ScriptManager>
+<table id="Table_01" width="100%" height="115" border="0" cellpadding="0" cellspacing="0" style="background-color:White;">
+	<tr>
+		<td rowspan="3">
+			<img src="images/LOGO.png" width="455" height="135" alt=""></td>
+		<td rowspan="3">
+			<img src="images/yonetim_paneli_02.png" width="60" height="115" alt=""></td>
+		<td>
+			<img src="images/yonetim_paneli_03.png" width="470" height="32" alt=""></td>
+		<td rowspan="3" width="100%">&nbsp;
+			</td>
+	</tr>
+	<tr>
+		<td style="font-size:xx-large">
+			YÖNETİM PANELİ</td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/yonetim_paneli_06.png" width="470" height="21" alt=""></td>
+	</tr>
+	</table>
+<table id="Table_2" height="100%" border="0" cellpadding="0" cellspacing="0" style="width: 100%;background-color:White;">
+	<tr>
+		<td background="images/yonetim_paneli_07.png" valign="top" height="600" width="250" style="text-align: center">&nbsp;&nbsp;<br />
+            <table border="0" cellpadding="0" cellspacing="0" style="width: 236px; position: static;
+                text-align: center">
+                <tr>
+                    <td style="width: 100px; text-align: left; height: 16px;">
+                        &nbsp;<uc1:yonetimmenu ID="Yonetimmenu1" runat="server" />
+                        <br />
+                    </td>
+                </tr>
+            </table>
+			</td>
+		<td valign="top" background="images/yonetim_paneli_08.png" height="100%">
+            <br />
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+       </td>
+	</tr>
+</table>
+
+</div>
+    </form>
+</body>
+
+  
+</html>
+
