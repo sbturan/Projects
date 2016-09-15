@@ -1,0 +1,99 @@
+[26-Jun-2015 20:50:28 UTC] PHP Warning:  require_once(mail/class.phpgmailer.php): failed to open stream: No such file or directory in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 3
+[26-Jun-2015 20:50:28 UTC] PHP Fatal error:  require_once(): Failed opening required 'mail/class.phpgmailer.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 3
+[26-Jun-2015 20:50:44 UTC] PHP Warning:  require_once(mail/class.phpgmailer.php): failed to open stream: No such file or directory in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 3
+[26-Jun-2015 20:50:44 UTC] PHP Fatal error:  require_once(): Failed opening required 'mail/class.phpgmailer.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 3
+[26-Jun-2015 21:21:53 UTC] PHP Warning:  fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:21:53 UTC] PHP Warning:  fsockopen(): Failed to enable crypto in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:21:53 UTC] PHP Warning:  fsockopen(): unable to connect to ssl://smtp.gmail.com:587 (Unknown error) in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:21:57 UTC] PHP Warning:  fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:21:57 UTC] PHP Warning:  fsockopen(): Failed to enable crypto in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:21:57 UTC] PHP Warning:  fsockopen(): unable to connect to ssl://smtp.gmail.com:587 (Unknown error) in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:23:07 UTC] PHP Warning:  fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:23:07 UTC] PHP Warning:  fsockopen(): Failed to enable crypto in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:23:07 UTC] PHP Warning:  fsockopen(): unable to connect to ssl://smtp.gmail.com:587 (Unknown error) in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:23:13 UTC] PHP Warning:  fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:23:13 UTC] PHP Warning:  fsockopen(): Failed to enable crypto in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:23:13 UTC] PHP Warning:  fsockopen(): unable to connect to ssl://smtp.gmail.com:587 (Unknown error) in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:23:17 UTC] PHP Warning:  fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:23:17 UTC] PHP Warning:  fsockopen(): Failed to enable crypto in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:23:17 UTC] PHP Warning:  fsockopen(): unable to connect to ssl://smtp.gmail.com:587 (Unknown error) in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:23:18 UTC] PHP Warning:  fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:23:18 UTC] PHP Warning:  fsockopen(): Failed to enable crypto in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:23:18 UTC] PHP Warning:  fsockopen(): unable to connect to ssl://smtp.gmail.com:587 (Unknown error) in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:24:09 UTC] PHP Warning:  fsockopen(): SSL operation failed with code 1. OpenSSL Error messages:
+error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:24:09 UTC] PHP Warning:  fsockopen(): Failed to enable crypto in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:24:09 UTC] PHP Warning:  fsockopen(): unable to connect to ssl://smtp.gmail.com:587 (Unknown error) in /home/sant35krnc9/public_html/crm/project/presentation/mail/class.smtp.php on line 105
+[26-Jun-2015 21:32:05 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[26-Jun-2015 21:32:18 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[26-Jun-2015 21:32:46 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[26-Jun-2015 21:32:47 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[26-Jun-2015 21:32:55 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[26-Jun-2015 21:33:00 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[26-Jun-2015 21:33:01 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[26-Jun-2015 21:33:21 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[26-Jun-2015 21:33:22 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[26-Jun-2015 21:33:39 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[26-Jun-2015 21:34:06 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[26-Jun-2015 21:34:52 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[26-Jun-2015 21:34:53 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[08-Jul-2015 20:27:08 UTC] PHP Parse error:  syntax error, unexpected 'Şifre' (T_STRING) in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:32:08 UTC] PHP Parse error:  syntax error, unexpected 'Şifre' (T_STRING) in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:32:32 UTC] PHP Parse error:  syntax error, unexpected 'Şifre' (T_STRING) in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:33:23 UTC] PHP Parse error:  syntax error, unexpected 'Şifre' (T_STRING) in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:33:23 UTC] PHP Parse error:  syntax error, unexpected 'Şifre' (T_STRING) in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:33:29 UTC] PHP Parse error:  syntax error, unexpected 'Şifre' (T_STRING) in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:33:37 UTC] PHP Parse error:  syntax error, unexpected 'Şifre' (T_STRING) in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:33:38 UTC] PHP Parse error:  syntax error, unexpected 'Şifre' (T_STRING) in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:33:58 UTC] PHP Warning:  iconv() expects exactly 3 parameters, 1 given in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 4
+[08-Jul-2015 20:33:58 UTC] PHP Warning:  iconv() expects exactly 3 parameters, 1 given in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 7
+[08-Jul-2015 20:33:58 UTC] PHP Warning:  iconv() expects exactly 3 parameters, 1 given in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:33:58 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[08-Jul-2015 20:34:02 UTC] PHP Warning:  iconv() expects exactly 3 parameters, 1 given in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 4
+[08-Jul-2015 20:34:02 UTC] PHP Warning:  iconv() expects exactly 3 parameters, 1 given in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 7
+[08-Jul-2015 20:34:02 UTC] PHP Warning:  iconv() expects exactly 3 parameters, 1 given in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:34:02 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[08-Jul-2015 20:34:10 UTC] PHP Warning:  iconv() expects exactly 3 parameters, 1 given in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 4
+[08-Jul-2015 20:34:10 UTC] PHP Warning:  iconv() expects exactly 3 parameters, 1 given in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 7
+[08-Jul-2015 20:34:10 UTC] PHP Warning:  iconv() expects exactly 3 parameters, 1 given in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:34:10 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[08-Jul-2015 20:44:16 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 12
+[08-Jul-2015 20:44:50 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 12
+[08-Jul-2015 20:51:05 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[08-Jul-2015 20:51:46 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[08-Jul-2015 20:51:51 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[08-Jul-2015 20:53:26 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:53:27 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:53:51 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:53:52 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:53:53 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:53:53 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 9
+[08-Jul-2015 20:54:10 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[08-Jul-2015 20:54:12 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[08-Jul-2015 20:54:12 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 13
+[08-Jul-2015 20:55:08 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 10
+[08-Jul-2015 20:55:08 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 10
+[08-Jul-2015 20:55:49 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 10
+[08-Jul-2015 20:55:50 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 10
+[08-Jul-2015 20:57:40 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 10
+[08-Jul-2015 20:57:41 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 10
+[08-Jul-2015 20:57:41 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 10
+[08-Jul-2015 20:58:27 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 10
+[08-Jul-2015 20:58:28 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 10
+[08-Jul-2015 20:58:28 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 10
+[08-Jul-2015 20:58:29 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 10
+[08-Jul-2015 20:58:29 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 10
+[08-Jul-2015 20:58:29 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 10
+[08-Jul-2015 20:58:30 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 10
+[08-Jul-2015 20:58:47 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 6
+[08-Jul-2015 20:58:48 UTC] PHP Warning:  mail(): Multiple or malformed newlines found in additional_header in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 6
+[13-Jul-2015 20:09:36 UTC] PHP Warning:  Creating default object from empty value in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 3
+[20-Jul-2015 18:56:00 UTC] PHP Warning:  Creating default object from empty value in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 3
+[24-Jul-2015 11:57:19 UTC] PHP Warning:  Creating default object from empty value in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 3
+[13-Aug-2015 11:35:31 UTC] PHP Warning:  Creating default object from empty value in /home/sant35krnc9/public_html/crm/project/presentation/mail/mail.php on line 3

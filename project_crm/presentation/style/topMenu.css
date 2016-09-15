@@ -1,0 +1,43 @@
+header ul.menu1
+{
+    padding:0;
+    list-style-type: none;
+    height: 26px;
+    /*width:500px;margin:0 auto;*//*Uncomment this line to make the menu center-aligned.*/
+	 width: 1000px;
+}
+
+header ul.menu1 li
+{ 
+    border:1px solid #65A2DC;
+    border-right:none;
+    list-style-type: none;
+    padding:0;margin:0;
+    float:left;
+    display: block;
+    color:White;
+}
+header ul.menu1 li.lastItem
+{ 
+    border-right:1px solid #65A2DC;
+}
+
+header ul.menu1 li a
+{
+    padding: 0 20px;
+    background-image: url(/../img/bg.gif);
+    border:1px solid #DDECF9;
+    border-top:1px solid #FFFFFF;
+    color:White;
+    text-align: left;
+    text-decoration:none;
+    display: block;
+    float: left;
+    font: bold 12px Arial;
+    line-height: 26px;
+}
+
+header ul.menu1 li a:hover, ul.menu1 li a.current
+{
+    background-position:0 -40px;
+}
