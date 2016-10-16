@@ -14,7 +14,6 @@ class MorrisTraversal_InOrderTreversalWOStachAndRcrcs {
 		current = root;
 		while (current != null) {
 			if (current.left == null) {
-				System.out.print(current.val + " ");
 				current = current.right;
 			} else {
 				/* Find the inorder predecessor of current */
@@ -34,7 +33,6 @@ class MorrisTraversal_InOrderTreversalWOStachAndRcrcs {
 				 */
 				else {
 					pre.right = null;
-					System.out.print(current.val + " ");
 					current = current.right;
 				} /* End of if condition pre->right == NULL */
 

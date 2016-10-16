@@ -1,25 +1,37 @@
-import java.util.ArrayList;
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Test {
-	public static void main(String[] args) {
-		TreeNode t1 = new TreeNode(1);
-		TreeNode t2 = new TreeNode(2);
-		TreeNode t3 = new TreeNode(3);
-		t2.left = t3;
-		t3.left = t1;
-//		for(int i=1;i<100;i++){
-//			System.out.println(i+" "+lastRemaining(i));	
-//		}
-		System.out.println(lastRemaining(6157));
+	public static void main(String[] args) throws NumberFormatException, IOException {
 		
-
+		Scanner sc=new Scanner(System.in);
+		int row=sc.nextInt();
+		sc.nextInt();
+		sc.nextLine();
+		int[] array=new int[row];
+		for(int i=0;i<row;i++){
+			array[i]=Integer.parseInt(sc.nextLine(), 2);
+		}
+		sc.close();
+		int maxTeam=0;
+		int maxTopic=0;
+		for(int i=0;i<row;i++){
+			for(int j=i+1;j<row;j++){
+				if(Integer.bitCount(array[i]|array[j])>maxTopic){
+					maxTopic=(Integer.bitCount(array[i]|array[j]));
+					maxTeam=1;
+				}else if(Integer.bitCount(array[i]|array[j])==maxTopic){
+					maxTeam++;
+				}
+			}
+		}
+			
+		System.out.println(maxTopic);
+		System.out.println(maxTeam);
+		
 	}
-	  public static int lastRemaining(int n) {
-	        return helper(n, true);
-	    }
-	   static int helper(int n, boolean fromLeft) {
-	        if (n == 1) return 1;
-	        if (fromLeft) return 2 * helper(n/2, false);
-	        return 2 * helper(n/2, true) - 1 + (n & 1);
-	    }
+
+
 }
