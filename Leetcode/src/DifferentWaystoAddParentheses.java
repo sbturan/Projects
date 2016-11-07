@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DifferentWaystoAddParentheses {
+	
 	public List<Integer> diffWaysToCompute(String input) {
 
 		List<Integer> result = new ArrayList<>();

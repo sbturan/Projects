@@ -1,36 +1,52 @@
 public class TrappingRainWater {
 	public static void main(String[] args) {
-		TrappingRainWater t= new TrappingRainWater();
-		System.out.println(t.trap(new int[]{4,2,3}));
+		TrappingRainWater t = new TrappingRainWater();
+		System.out.println(t.trap(new int[] {  2, 3,4 }));
 	}
 
 	public int trap(int[] height) {
-		
+
+		if(height.length<3) return 0;
 		int result=0;
-		return result; 
+		int max=height[0];
+		for(int i=0;i<height.length;i++){
+			int j=height.length-1;
 			
+		    for(;j>i;j--){
+		    	if(height[j]>=height[i]) break;
+		    }
+		    if(j>i){
+		    	if(height[i]<=max){
+					result+=max-height[i];
+				}else{
+					max=height[i];
+				}	
+		    }else{
+		    	if(max==height[i]){
+		    		max=height[i+1];
+		    	}
+		    }
+			
+		}
 		
-//		if(height.length<3) return 0; 
-//	 int max=height[0];
-//	 int total=0;
-//	 for(int a:height){
-//		 max=Math.max(max, a);
-//	 }
-//	 for(int i=max;i>0;i--){
-//       int first=0,last=height.length-1;
-//       while(height[first]<i) {
-//    	   first++;
-//       }
-//       while(height[last]<i) last--;
-//       while(first<last){
-//    	   if(height[first]<i) {
-//    		   total++;
-//    	   }
-//    	   first++;
-//       }
-//       
-//	 }
-//	 
-//	 return total;
-	}	  
+		return result;
+	}
+	
+//	int findWaterPerLevel(int level,int[] height){
+//		int first=0;
+//		while(height[first]<level){
+//			first++;
+//		}
+//		int last=height.length-1;
+//		while(height[last]<level){
+//			last--;
+//		}
+//		int result=0;
+//		for(int i=first;i<last;i++){
+//			if(height[i]<level){
+//				result++;
+//			}
+//		}
+//		return result;
+//	}
 }
