@@ -26,6 +26,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>MainPage</finalName>
+		<finalName>ROOT</finalName>
 	</build>
 </project>

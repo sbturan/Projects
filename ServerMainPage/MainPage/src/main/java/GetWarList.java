@@ -33,7 +33,7 @@ public class GetWarList extends HttpServlet {
 		File f = new File(System.getProperty( "catalina.base" ).concat("/webapps"));
 		List<String> result = new ArrayList<String>();
 		for (File fi : f.listFiles()) {
-			if (fi.getName().endsWith(".war") && !fi.getName().equals("MainPage.war")) {
+			if (fi.getName().endsWith(".war") && !fi.getName().equals("ROOT.war")) {
 				result.add(fi.getName().replaceAll(".war", ""));
 			}
 		}
