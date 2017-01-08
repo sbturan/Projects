@@ -1,98 +1,115 @@
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.TreeSet;
-
-
-class Item  {
-
-	int key;
-	int value;
-	int frequency;
-	Long lastUsedTime;
-    
-	public Item(int key,int value){
-		this.key=key;
-		this.value=value;
-	    this.frequency=0;
-        this.lastUsedTime=0L;
-	}
-
-	
-
-}
+import java.util.LinkedHashSet;
 
 public class LFUCache {
-//	public static void main(String[] args) throws InterruptedException {
-//		
-//		LFUCache lfu=new LFUCache(2);
-//		lfu.set(3, 1);
-//		lfu.set(2, 1);
-//		lfu.set(2, 2);
-//		lfu.set(4, 4);
-//		System.out.println(lfu.get(2));
-////		lfu.set(3, 3);
-////		System.out.println(lfu.get(2));
-////		System.out.println(lfu.get(3));
-////		lfu.set(4, 4);
-////		System.out.println(lfu.get(1));
-////		System.out.println(lfu.get(3));
-////		System.out.println(lfu.get(4));
-//		
-//	}
-	HashMap<Integer, Item> map;
-	int capacity;
-	TreeSet<Item> tree;
-	public LFUCache(int capacity) {
-		map = new HashMap<>();
-		this.capacity = capacity;
-		tree=new TreeSet<>(new Comparator<Item>() {
-
-			@Override
-			public int compare(Item o1, Item o2) {
-				if(o1.frequency!=o2.frequency){
-					return o1.frequency-o2.frequency;
-				}
-				if(Long.compare(o1.lastUsedTime, o2.lastUsedTime)!=0)
-				return Long.compare(o1.lastUsedTime, o2.lastUsedTime);
-				return Integer.compare(o1.key, o2.key);
-			}
-		});
-	}
-
-	public int get(int key) {
-
-      if(!map.containsKey(key)) return -1;
-      Item item = map.get(key);
-      tree.remove(item);
-      item.frequency+=1;
-      item.lastUsedTime=System.currentTimeMillis();
-      tree.add(item);
-      map.put(item.key,item);
-      return item.value;
-	}
-
-	public void set(int key, int value) {
-        if(map.containsKey(key)) {
-        	Item item = map.get(key);
-        	tree.remove(item);
-        	item.lastUsedTime=System.currentTimeMillis();
-        	item.value=value;
-        	tree.add(item);
-        	map.put(item.key, item);
-        	return;
+    class Node {
+        public int count = 0;
+        public LinkedHashSet<Integer> keys = null;
+        public Node prev = null, next = null;
+        
+        public Node(int count) {
+            this.count = count;
+            keys = new LinkedHashSet<Integer>();
+            prev = next = null;
         }
-		if(capacity==map.size()){
-        	Item pollFirst = tree.pollFirst();
-        	if(pollFirst!=null)
-            map.remove(pollFirst.key);
-           
+    }
+    private Node head = null;
+    private int cap = 0;
+    private HashMap<Integer, Integer> valueHash = null;
+    private HashMap<Integer, Node> nodeHash = null;
+    
+    public LFUCache(int capacity) {
+        this.cap = capacity;
+        valueHash = new HashMap<Integer, Integer>();
+        nodeHash = new HashMap<Integer, Node>();
+    }
+    
+    public int get(int key) {
+        if (valueHash.containsKey(key)) {
+            increaseCount(key);
+            return valueHash.get(key);
         }
-		if(map.size()<capacity)
-		{
-			Item item=new Item(key,value);
-	         map.put(item.key, item);
-	         tree.add(item);
-		}
-         
-	}
+        return -1;
+    }
+    
+    public void set(int key, int value) {
+        if ( cap == 0 ) return;
+        if (valueHash.containsKey(key)) {
+            valueHash.put(key, value);
+        } else {
+            if (valueHash.size() < cap) {
+                valueHash.put(key, value);
+            } else {
+                removeOld();
+                valueHash.put(key, value);
+            }
+            addToHead(key);
+        }
+        increaseCount(key);
+    }
+    
+    private void addToHead(int key) {
+        if (head == null) {
+            head = new Node(0);
+            head.keys.add(key);
+        } else if (head.count > 0) {
+            Node node = new Node(0);
+            node.keys.add(key);
+            node.next = head;
+            head.prev = node;
+            head = node;
+        } else {
+            head.keys.add(key);
+        }
+        nodeHash.put(key, head);      
+    }
+    
+    private void increaseCount(int key) {
+        Node node = nodeHash.get(key);
+        node.keys.remove(key);
+        
+        if (node.next == null) {
+            node.next = new Node(node.count+1);
+            node.next.prev = node;
+            node.next.keys.add(key);
+        } else if (node.next.count == node.count+1) {
+            node.next.keys.add(key);
+        } else {
+            Node tmp = new Node(node.count+1);
+            tmp.keys.add(key);
+            tmp.prev = node;
+            tmp.next = node.next;
+            node.next.prev = tmp;
+            node.next = tmp;
+        }
+
+        nodeHash.put(key, node.next);
+        if (node.keys.size() == 0) remove(node);
+    }
+    
+    private void removeOld() {
+        if (head == null) return;
+        int old = 0;
+        for (int n: head.keys) {
+            old = n;
+            break;
+        }
+        head.keys.remove(old);
+        if (head.keys.size() == 0) remove(head);
+        nodeHash.remove(old);
+        valueHash.remove(old);
+    }
+    
+    private void remove(Node node) {
+        if (node.prev == null) {
+            head = node.next;
+        } else {
+            node.prev.next = node.next;
+        } 
+        if (node.next != null) {
+            node.next.prev = node.prev;
+        }
+    }
+    
+
 }

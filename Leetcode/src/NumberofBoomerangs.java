@@ -1,5 +1,5 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
 
 public class NumberofBoomerangs {
 	public static void main(String[] args) {
@@ -9,35 +9,32 @@ public class NumberofBoomerangs {
 		 System.out.println(n.numberOfBoomerangs(points));
 
 	}
-
 	public int numberOfBoomerangs(int[][] points) {
+	    int res = 0;        
+	    Map<Integer, Integer> map = new HashMap<>();
 
-		int result = 0;
-		for (int i = 0; i < points.length; i++) {
-			HashSet<Integer> distances = new HashSet<>();
-			for (int j = 0; j < points.length; j++) {
-				if (i == j)
-					continue;
-				int distance = getDistance(points[i], points[j]);
-				if (distances.contains(distance)) {
-					result += 2;
-					System.out.println(distance+" "+points[i][0]+" "+points[i][1]+"- "+points[j][0]+" "+points[j][1]);
-					continue;
-				}
-
-				distances.add(distance);
-			}
-		}
-		
-		return result;
-
+	    for(int i=0; i<points.length; i++) {
+	        for(int j=0; j<points.length; j++) {
+	            if(i == j)
+	                continue;
+	            
+	            int d = getDistance(points[i], points[j]);                
+	            map.put(d, map.getOrDefault(d, 0) + 1);
+	        }
+	        
+	        for(int val : map.values()) {
+	            res += val * (val-1);
+	        }            
+	        map.clear();
+	    }
+	    
+	    return res;
 	}
 
 	private int getDistance(int[] a, int[] b) {
-		  int dx = a[0] - b[0];
-		    int dy = a[1] - b[1];
-		    
-		    return dx*dx + dy*dy;
+	    int dx = a[0] - b[0];
+	    int dy = a[1] - b[1];
+	    
+	    return dx*dx + dy*dy;
 	}
-
 }
